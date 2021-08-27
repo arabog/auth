@@ -20,7 +20,7 @@ app.use(express.json())
 app.use("/api/auth", authRoute)
 
 
-// Error Handler(Should)
+// Error Handler(Should be last piece of middleware)
 app.use(errorHandler)
 
 

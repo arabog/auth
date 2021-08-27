@@ -6,7 +6,7 @@ const errorHandler = (err, req, res, next) => {
 
           error.message = err.message
 
-          console.log(err)
+          // console.log(err)
 
           if(err.code === 11000) {
                     const message = "Duplicate Field value Enter"
