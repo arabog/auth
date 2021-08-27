@@ -3,6 +3,7 @@ const express = require("express")
 const authRoute = require("./routes/auth")
 const connectDB = require("./config/db")
 const errorHandler = require("./middleware/error")
+const protectRoute = require("./routes/private")
 
 
 // connect DB
@@ -18,6 +19,7 @@ app.use(express.json())
 
 // route
 app.use("/api/auth", authRoute)
+app.use("/api/private", protectRoute)
 
 
 // Error Handler(Should be last piece of middleware)
